@@ -2,10 +2,10 @@
  * Program : Heap Sort
  * Unit    : 2 - Divide and Conquer
  *
- * Approach: 1) array ko Max-Heap banao  2) root (max) ko end me swap karo,
- *           heap size 1 kam karo, heapify karo. Repeat.
+ * Approach: 1) convert array into max-heap  2) put root in the last, 
+ *           reduce heap soze by 1, heapify . Repeat.
  *
- * Time    : Best/Average/Worst O(n log n)   (build heap O(n) + n * heapify O(log n))
+ * Time    : Best/Average/Worst O(n log n)   
  * Space   : O(1) (in-place)
  * Stable  : No
  */
