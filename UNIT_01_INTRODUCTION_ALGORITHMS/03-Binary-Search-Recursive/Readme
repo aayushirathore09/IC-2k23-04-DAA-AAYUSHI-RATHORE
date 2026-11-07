@@ -1,0 +1,36 @@
+ Recursive Binary Search 
+
+** Problem Statement
+Find key usind recursion in a sorted array, found then retun index , else -1 . 
+
+** Algorithm / Approach
+Function khud ko sirf us half pe call karta hai jaha key ho sakti hai.
+- **Base case 1:** `low > high` -> -1 (nahi mila).
+- **Base case 2:** `arr[mid] == key` -> mid return.
+- **Recursive case:** key badi hai to `(mid+1, high)`, chhoti hai to `(low, mid-1)`.
+
+** Pseudocode
+
+BINARY_SEARCH_RECURSIVE(arr, low, high, key):
+    if low > high: return -1
+    mid = low + (high - low) / 2
+    if arr[mid] == key: return mid
+    if arr[mid] < key:
+        return BINARY_SEARCH_RECURSIVE(arr, mid + 1, high, key)
+    else:
+        return BINARY_SEARCH_RECURSIVE(arr, low, mid - 1, key)
+
+
+** Time & Space Complexity 
+Recurrence: `T(n) = T(n/2) + O(1)` -> **O(log n)** (Master Theorem).
+
+| Case | Time |
+|---|---|
+| Best | O(1) |
+| Average | O(log n) |
+| Worst | O(log n) |
+| **Space** | **O(log n)** (recursion stack depth) |
+
+
+
+
