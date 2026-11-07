@@ -1,0 +1,55 @@
+Binary Search: Best / Average / Worst Case Analysis :-
+
+## Problem Statement :-
+Understanding the best, worst and average case complexitiies of Binary search.
+
+## Approach :-
+- Test array: `arr[i] = 2*i` (sirf even numbers), isse odd numbers array me **nahi** hote (unsuccessful search test ho paata hai).
+- **Best case:** middle element search karo.
+- **Average case:** array ke saare present keys search karo, comparisons ka average lo.
+- **Worst case:** saare absent keys me se maximum comparisons lo.
+- 1 comparison = 1 loop iteration (ek `mid` check).
+- Results `case_analysis.csv` me save hote hain (graph ke liye).
+
+## Pseudocode :-
+
+ANALYZE(n):
+    arr[i] = 2*i  for i in 0..n-1
+    best    = comparisons(arr, arr[(n-1)/2])
+    average = (sum of comparisons(arr, arr[i]) for all i) / n
+    worst   = max of comparisons(arr, k) for all absent k
+    theory  = floor(log2 n) + 1
+    print n, best, average, worst, theory
+
+
+## Flowchart :-
+
+flowchart TD
+    A([Start]) --> B[For each n in sizes]
+    B --> C[Build array arr i = 2i]
+    C --> D[Best: search middle element]
+    D --> E[Average: search all present keys, take mean]
+    E --> F[Worst: search all absent keys, take max]
+    F --> G[Compare with floor log2 n + 1]
+    G --> H[Print row + write CSV]
+    H --> I{More sizes?}
+    I -- Yes --> B
+    I -- No --> Z([End])
+
+
+## Time & Space Complexity (Theory)
+| Case | Kab hota hai | Comparisons | Time |
+|---|---|---|---|
+| **Best** | Key pehli baar me hi middle pe mil jaye | 1 | **O(1)** |
+| **Average** | Key random jagah ho | ~ log2(n) - 1 | **O(log n)** |
+| **Worst** | Key last level pe mile ya hai hi nahi | floor(log2 n) + 1 | **O(log n)** |
+
+**Space:** O(1) iterative, O(log n) recursive.
+Worst case derivation: `T(n) = T(n/2) + 1`, `T(1) = 1` -> `T(n) = floor(log2 n) + 1`.
+
+## Sample Input / Output :-              
+n         Best    Average     Worst   floor(log2 n)+1
+
+10        1       2.90        4       4
+100       1       5.80        7       7
+
