@@ -1,0 +1,46 @@
+# Iterative Binary Search ::
+
+## Problem Statement :
+Find the key from a sorted array , using loop. If key is there then return the index , else we have to retun -1.
+
+## Approach : 
+1. `low = 0`, `high = n-1`.
+2. till then `low <= high`: `mid = low + (high - low) / 2`.
+3. `arr[mid] == key` -> found . `arr[mid] < key` -> right half (`low = mid+1`). or left half (`high = mid-1`).
+4. Loop ends then there's no element .
+
+## Pseudocode :-
+BINARY_SEARCH_ITERATIVE(arr, n, key):
+    low = 0
+    high = n - 1
+    while low <= high:
+        mid = low + (high - low) / 2
+        if arr[mid] == key: return mid
+        else if arr[mid] < key: low = mid + 1
+        else: high = mid - 1
+    return -1
+
+## Flowchart :-
+
+flowchart TD
+    A([Start]) --> B[/Input sorted arr, key/]
+    B --> C[low = 0, high = n-1]
+    C --> D{low <= high?}
+    D -- No --> N[Return -1: Not found] --> Z([End])
+    D -- Yes --> E[mid = low + high-low / 2]
+    E --> F{arr mid == key?}
+    F -- Yes --> G[Return mid: Found] --> Z
+    F -- No --> H{arr mid < key?}
+    H -- Yes --> I[low = mid + 1] --> D
+    H -- No --> J[high = mid - 1] --> D
+
+
+## Time & Space Complexity
+| Case | Time |
+|---|---|
+| Best | O(1) |
+| Average | O(log n) |
+| Worst | O(log n) |
+| **Space** | **O(1)** |
+
+Har step me search space aadha ho jata hai: n -> n/2 -> n/4 ... -> 1, so ~log2(n) steps.
