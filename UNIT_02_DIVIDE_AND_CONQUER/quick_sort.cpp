@@ -2,9 +2,8 @@
  * Program : Quick Sort
  * Unit    : 2 - Divide and Conquer
  *
- * Divide  : pivot chuno, partition karo (chhote left me, bade right me)
- * Conquer : left aur right partitions ko recursively sort karo
- * Combine : kuch nahi (partition ke baad array in-place sorted hota hai)
+ * Divide  : we have to choose the pivot and the do partiotion accordingly.
+ * Conquer : sort the left and right partitions recursively . 
  *
  * Time    : Best/Average O(n log n), Worst O(n^2)  (already sorted array + last pivot)
  * Space   : O(log n) average recursion stack
