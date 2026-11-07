@@ -1,0 +1,60 @@
+# Array Operations (Insert, Delete, Search, Update, Traverse)
+
+## Problem Statement :-
+Ek integer array par basic operations implement karo: traverse, insert, delete, search aur update, input validation ke saath.
+
+## Algorithm :-
+- **Traverse**: index 0 se size-1 tak saare elements print karo.
+- **Insert at pos**: pos se aage ke elements ko ek step right shift karo, phir value `arr[pos]` me daalo.
+- **Delete at pos**: pos ke aage ke elements ko ek step left shift karo, size kam karo.
+- **Search**: Linear Search, har element ko key se compare karo.
+- **Update**: valid index pe direct nayi value assign karo.
+
+## Pseudocode :-
+
+INSERT(arr, size, pos, value):
+    if size == MAX or pos < 0 or pos > size: return ERROR
+    for i = size down to pos + 1:
+        arr[i] = arr[i-1]
+    arr[pos] = value
+    size = size + 1
+
+DELETE(arr, size, pos):
+    if pos < 0 or pos >= size: return ERROR
+    for i = pos to size - 2:
+        arr[i] = arr[i+1]
+    size = size - 1
+
+LINEAR_SEARCH(arr, size, key):
+    for i = 0 to size - 1:
+        if arr[i] == key: return i
+    return -1
+
+UPDATE(arr, size, pos, value):
+    if pos < 0 or pos >= size: return ERROR
+    arr[pos] = value
+
+
+## Flowchart :-
+flowchart TD
+    A([Start]) --> B[/Input pos, value/]
+    B --> C{size == MAX?}
+    C -- Yes --> E[Array full] --> Z([End])
+    C -- No --> D{0 <= pos <= size?}
+    D -- No --> F[Invalid position] --> Z
+    D -- Yes --> G[Shift elements right from pos]
+    G --> H[arr pos = value]
+    H --> I[size++]
+    I --> Z
+```
+
+## Time & Space Complexity :-
+| Operation | Best | Worst | Space |
+
+| Traverse | O(n) | O(n) | O(1) |
+| Insert | O(1) (end me) | O(n) (start me) | O(1) |
+| Delete | O(1) (last) | O(n) (first) | O(1) |
+| Search (Linear) | O(1) | O(n) | O(1) |
+| Update | O(1) | O(1) | O(1) |
+
+
