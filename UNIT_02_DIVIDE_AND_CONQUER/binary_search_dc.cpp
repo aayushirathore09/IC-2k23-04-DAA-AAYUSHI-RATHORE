@@ -2,13 +2,13 @@
  * Program : Binary Search using Divide and Conquer
  * Unit    : 2 - Divide and Conquer
  *
- * Divide  : array ko mid pe do halves me baanto
- * Conquer : sirf us half me search karo jaha key ho sakti hai
- * Combine : kuch nahi (answer seedha return hota hai)
+ * Divide  : divide array into 2 halves from thw mid .
+ * Conquer : search in only one half where the key can exist.
  *
  * Time    : Best O(1), Average/Worst O(log n)   Recurrence: T(n) = T(n/2) + O(1)
  * Space   : O(log n) (recursion stack)
  */
+
 #include <iostream>
 #include <vector>
 #include <string>
