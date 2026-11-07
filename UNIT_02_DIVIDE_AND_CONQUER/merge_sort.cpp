@@ -2,9 +2,9 @@
  * Program : Merge Sort
  * Unit    : 2 - Divide and Conquer
  *
- * Divide  : array ko mid pe do halves me baanto
- * Conquer : dono halves ko recursively sort karo
- * Combine : do sorted halves ko merge karo
+ * Divide  : divide array into 2 halves.
+ * Conquer : sort the two arrays recursively.
+ * Combine : merge the twosorted halves .
  *
  * Time    : Best/Average/Worst O(n log n)   Recurrence: T(n) = 2T(n/2) + O(n)
  * Space   : O(n) (temporary array)
