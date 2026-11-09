@@ -1,0 +1,49 @@
+# Fibonacci using Memoization (Top-Down DP)
+
+## Problem Statement
+n-th Fibonacci number , solve evry subproblem.
+
+## Pseudocode
+```
+memo[0..n] = -1
+
+FIB_MEMO(n):
+    if n <= 1: return n
+    if memo[n] != -1: return memo[n]
+    memo[n] = FIB_MEMO(n - 1) + FIB_MEMO(n - 2)
+    return memo[n]
+```
+
+## Flowchart
+```mermaid
+flowchart TD
+    A([Start: FIB_MEMO n]) --> B{n <= 1?}
+    B -- Yes --> C[Return n] --> Z([End])
+    B -- No --> D{memo n already hai?}
+    D -- Yes --> E[Return memo n] --> Z
+    D -- No --> F[memo n = FIB_MEMO n-1 + FIB_MEMO n-2]
+    F --> G[Return memo n] --> Z
+```
+
+## Time & Space Complexity
+| | Recursive | Memoized |
+|---|---|---|
+| Time | O(2ⁿ) | **O(n)** |
+| Space | O(n) | O(n) (memo table + stack) |
+
+## Recursive vs Memoized (same n pe)
+| n | Recursive calls | Memoized calls |
+|---|---|---|
+| 10 | 177 | 19 |
+| 35 | 29,860,703 | 69 |
+
+Memoized me calls hamesha `2n - 1` aate hain.
+
+## Sample Input / Output
+```
+n = 10  -> fib(10) = 55, Total recursive calls = 19
+n = 35  -> fib(35) = 9227465, Total recursive calls = 69
+n = 92  -> fib(92) = 7540113804746346429, Total recursive calls = 183
+```
+
+
