@@ -1,0 +1,77 @@
+# Fibonacci using Recursion
+
+## Problem Statement
+find the nth recursion.
+
+## Algorithm / Approach
+`fib(0) = 0`, `fib(1) = 1`, `fib(n) = fib(n-1) + fib(n-2)`.
+
+## Pseudocode
+```
+FIB(n):
+    if n <= 1: return n
+    return FIB(n - 1) + FIB(n - 2)
+```
+
+## Flowchart
+```mermaid
+flowchart TD
+    A([Start: FIB n]) --> B{n <= 1?}
+    B -- Yes --> C[Return n] --> Z([End])
+    B -- No --> D[a = FIB n-1]
+    D --> E[b = FIB n-2]
+    E --> F[Return a + b] --> Z
+```
+
+## Recursion Tree (n = 5)
+```
+                    fib(5)
+                  /        \
+             fib(4)        fib(3)
+            /     \        /    \
+        fib(3)  fib(2)  fib(2) fib(1)
+        /   \
+    fib(2) fib(1)   ...  (fib(3), fib(2) baar-baar repeat)
+```
+
+## Time & Space Complexity
+| | |
+|---|---|
+| Time | **O(2ⁿ)** (precisely ~ φⁿ, φ = 1.618) |
+| Space | O(n) (recursion stack depth) |
+
+Recurrence: `T(n) = T(n-1) + T(n-2) + O(1)`
+
+## Sample Input / Output
+```
+n = 10
+fib(10) = 55
+Total recursive calls = 177
+
+n = 35
+fib(35) = 9227465
+Total recursive calls = 29860703
+Time = ~103 ms   
+```
+
+## Screenshots / Graphs
+_Terminal screenshot yaha add karo: `screenshots/output.png`_
+
+## Experimental Results
+| n | Recursive calls |
+|---|---|
+| 10 | 177 |
+| 35 | 29,860,703 |
+
+ 
+## Learning Outcomes
+- Overlapping subproblems .
+- Plain recursion exponential complexity.
+- DP (memoization).
+
+## How to Run
+```
+g++ -std=c++17 fibonacci_recursive.cpp -o fib_rec
+./fib_rec
+```
+
