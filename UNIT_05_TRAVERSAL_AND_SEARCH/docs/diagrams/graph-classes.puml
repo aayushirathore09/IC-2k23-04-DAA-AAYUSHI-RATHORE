@@ -1,0 +1,22 @@
+@startuml
+abstract class Graph {
+  +n : int
+  +directed : bool
+  +edge_count : int
+  +validate_vertex(u)
+  +degree(u)
+  +edges()
+  {abstract} +add_edge(u, v)
+  {abstract} +neighbors(u)
+}
+class AdjacencyMatrix { +matrix : int[][] }
+class AdjacencyList { +adj : int[][] }
+Graph <|-- AdjacencyMatrix
+Graph <|-- AdjacencyList
+class bfs <<function>>
+class dfs_recursive <<function>>
+class dfs_iterative <<function>>
+bfs ..> Graph : neighbors()
+dfs_recursive ..> Graph : neighbors()
+dfs_iterative ..> Graph : neighbors()
+@enduml

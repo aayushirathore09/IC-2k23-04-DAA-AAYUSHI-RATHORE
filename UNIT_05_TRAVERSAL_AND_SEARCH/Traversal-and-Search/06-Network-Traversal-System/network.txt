@@ -1,0 +1,14 @@
+# Campus network - one link per line: <device> <device>   (links are two-way)
+Gateway Firewall
+Firewall CoreSwitch
+CoreSwitch LabSwitch
+CoreSwitch LibrarySwitch
+CoreSwitch AdminSwitch
+LabSwitch PC1
+LabSwitch PC2
+LabSwitch PC3
+LibrarySwitch PC4
+AdminSwitch Server1
+AdminSwitch PC5
+LibrarySwitch AdminSwitch   # redundant link
+PrinterA PrinterB           # separate, disconnected segment

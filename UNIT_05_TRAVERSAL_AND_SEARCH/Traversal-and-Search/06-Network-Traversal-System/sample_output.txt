@@ -1,0 +1,21 @@
+Loaded network: 14 devices, 13 links
+
+Devices reachable from Gateway (by hop count):
+  0 hop(s): Gateway
+  1 hop(s): Firewall
+  2 hop(s): CoreSwitch
+  3 hop(s): LabSwitch, LibrarySwitch, AdminSwitch
+  4 hop(s): PC1, PC2, PC3, PC4, Server1, PC5
+  Not reachable: PrinterA, PrinterB
+
+Fewest-hop route (4 hops): Gateway -> Firewall -> CoreSwitch -> LibrarySwitch -> PC4
+
+No route between Gateway and PrinterA.
+
+DFS scan order from Gateway: Gateway -> Firewall -> CoreSwitch -> LabSwitch -> PC1 -> PC2 -> PC3 -> LibrarySwitch -> AdminSwitch -> Server1 -> PC5 -> PC4
+
+The network has 2 connected segment(s):
+  Segment 1 (12 devices): Gateway, Firewall, CoreSwitch, LabSwitch, LibrarySwitch, AdminSwitch, PC1, PC2, PC3, PC4, Server1, PC5
+  Segment 2 (2 devices): PrinterA, PrinterB
+
+Devices within 1 hop(s) of CoreSwitch: Firewall, LabSwitch, LibrarySwitch, AdminSwitch

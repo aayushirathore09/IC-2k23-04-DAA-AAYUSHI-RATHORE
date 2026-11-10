@@ -1,0 +1,25 @@
+Level-order input : [1, 2, 3, 4, 5, None, 6, 7]
+Nodes = 7,  Height = 4
+
+Tree (rotated 90 deg, right child on top):
+        6
+    3
+1
+        5
+    2
+        4
+            7
+
+Preorder  (Root-Left-Right)
+   Recursive : [1, 2, 4, 7, 5, 3, 6]
+   Iterative : [1, 2, 4, 7, 5, 3, 6]
+   Verified  : OK - both match
+Inorder   (Left-Root-Right)
+   Recursive : [7, 4, 2, 5, 1, 3, 6]
+   Iterative : [7, 4, 2, 5, 1, 3, 6]
+   Verified  : OK - both match
+Postorder (Left-Right-Root)
+   Recursive : [7, 4, 5, 2, 6, 3, 1]
+   Iterative : [7, 4, 5, 2, 6, 3, 1]
+   Verified  : OK - both match
+Level-order (BFS)          : [1, 2, 3, 4, 5, 6, 7]

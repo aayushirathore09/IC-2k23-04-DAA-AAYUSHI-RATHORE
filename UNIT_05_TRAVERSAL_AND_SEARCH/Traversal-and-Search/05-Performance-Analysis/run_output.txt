@@ -1,0 +1,27 @@
+Running sparse-graph experiment ...
+[sparse] V=  200 E=    600 | BFS list    0.036 ms matrix    0.756 ms | DFS list    0.056 ms matrix    0.730 ms
+[sparse] V=  400 E=   1200 | BFS list    0.085 ms matrix    3.284 ms | DFS list    0.132 ms matrix    3.357 ms
+[sparse] V=  600 E=   1800 | BFS list    0.133 ms matrix    8.703 ms | DFS list    0.210 ms matrix    8.550 ms
+[sparse] V=  800 E=   2400 | BFS list    0.293 ms matrix   24.332 ms | DFS list    0.468 ms matrix   25.221 ms
+[sparse] V= 1000 E=   3000 | BFS list    0.373 ms matrix   24.663 ms | DFS list    0.400 ms matrix   24.240 ms
+[sparse] V= 1200 E=   3600 | BFS list    0.279 ms matrix   34.516 ms | DFS list    0.753 ms matrix   34.421 ms
+[sparse] V= 1400 E=   4200 | BFS list    0.321 ms matrix   46.150 ms | DFS list    0.546 ms matrix   48.258 ms
+[sparse] V= 1600 E=   4800 | BFS list    0.734 ms matrix   62.809 ms | DFS list    0.605 ms matrix   65.864 ms
+[sparse] V= 1800 E=   5400 | BFS list    0.440 ms matrix   72.829 ms | DFS list    1.042 ms matrix   81.982 ms
+[sparse] V= 2000 E=   6000 | BFS list    0.498 ms matrix   97.009 ms | DFS list    0.964 ms matrix  100.051 ms
+
+Running dense-graph experiment ...
+[dense ] V=  100 E=   2475 | BFS list    0.056 ms matrix    0.358 ms | DFS list    0.067 ms matrix    0.363 ms
+[dense ] V=  200 E=   9950 | BFS list    0.209 ms matrix    1.345 ms | DFS list    0.230 ms matrix    1.380 ms
+[dense ] V=  300 E=  22425 | BFS list    0.650 ms matrix    3.877 ms | DFS list    0.555 ms matrix    4.649 ms
+[dense ] V=  400 E=  39900 | BFS list    0.853 ms matrix    5.772 ms | DFS list    1.016 ms matrix    6.435 ms
+[dense ] V=  500 E=  62375 | BFS list    1.851 ms matrix    9.244 ms | DFS list    2.014 ms matrix   10.642 ms
+[dense ] V=  600 E=  89850 | BFS list    2.538 ms matrix   13.693 ms | DFS list    3.185 ms matrix   17.512 ms
+[dense ] V=  700 E= 122325 | BFS list    4.345 ms matrix   18.546 ms | DFS list    5.509 ms matrix   31.532 ms
+[dense ] V=  800 E= 159800 | BFS list    5.793 ms matrix   24.680 ms | DFS list    6.409 ms matrix   31.087 ms
+
+Theoretical vs empirical complexity (linear fit of BFS time against operation count):
+  Adjacency list: time vs (V + 2E)         R^2 = 0.9702
+  Adjacency matrix: time vs V^2            R^2 = 0.9851
+
+Saved: results.csv, time_sparse.png, time_dense.png, memory.png, theory_vs_empirical.png

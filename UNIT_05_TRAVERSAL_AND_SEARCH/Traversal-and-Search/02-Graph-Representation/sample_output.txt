@@ -1,0 +1,37 @@
+Graph: V = 10, E = 10, undirected
+
+Adjacency Matrix:
+      0  1  2  3  4  5  6  7  8  9
+  0:  0  1  1  0  0  0  0  0  0  0
+  1:  1  0  0  1  1  0  0  0  0  0
+  2:  1  0  0  0  0  1  1  0  0  0
+  3:  0  1  0  0  0  0  0  1  0  0
+  4:  0  1  0  0  0  0  0  1  0  0
+  5:  0  0  1  0  0  0  1  0  0  0
+  6:  0  0  1  0  0  1  0  0  0  0
+  7:  0  0  0  1  1  0  0  0  0  0
+  8:  0  0  0  0  0  0  0  0  0  1
+  9:  0  0  0  0  0  0  0  0  1  0
+
+Adjacency List:
+  0 -> [1, 2]
+  1 -> [0, 3, 4]
+  2 -> [0, 5, 6]
+  3 -> [1, 7]
+  4 -> [1, 7]
+  5 -> [2, 6]
+  6 -> [2, 5]
+  7 -> [3, 4]
+  8 -> [9]
+  9 -> [8]
+
+Degrees (out-degree for directed graphs):
+  deg(0)=2, deg(1)=3, deg(2)=3, deg(3)=2, deg(4)=2, deg(5)=2, deg(6)=2, deg(7)=2, deg(8)=1, deg(9)=1
+
+Verification: matrix and list contain the same edge set -> OK
+
+Space used  : matrix stores 100 cells (V^2), list stores 30 entries (V + 2E)
+
+Operation demo on edge (0, 1):
+  has_edge(0,1) matrix=True, list=True
+  after remove_edge -> matrix=False, list=False, E=9
