@@ -1,0 +1,22 @@
+===== TSP - Branch and Bound =====
+1. Manual input
+2. Random instance
+Choice: Cities ki sankhya (2 se 20): Cost matrix dalo (5x5), diagonal 0 rakho, baaki cost >= 1.
+cost[0][1]: cost[0][2]: cost[0][3]: cost[0][4]: cost[1][0]: cost[1][2]: cost[1][3]: cost[1][4]: cost[2][0]: cost[2][1]: cost[2][3]: cost[2][4]: cost[3][0]: cost[3][1]: cost[3][2]: cost[3][4]: cost[4][0]: cost[4][1]: cost[4][2]: cost[4][3]: 
+Cost matrix:
+         0    1    2    3    4
+   0     0   20   30   10   11
+   1    15    0   16    4    2
+   2     3    5    0    2    4
+   3    19    6   18    0    3
+   4    16    4    7   16    0
+
+Branch and Bound:
+  Tour: 0 -> 3 -> 1 -> 4 -> 2 -> 0
+  Minimum cost = 28
+  Nodes/states explored = 11
+  Time = 8.1 us
+  Estimated memory = 552.0 B
+  Total possible tours (n-1)! = 24
+
+Verification (Held-Karp optimum = 28): MATCH - answer sahi hai

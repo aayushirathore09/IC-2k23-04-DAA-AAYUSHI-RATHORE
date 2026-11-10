@@ -1,0 +1,48 @@
+
+===== Exhaustive Search =====
+1. 0/1 Knapsack (brute force)
+2. TSP (brute force)
+3. Benchmark (n vs time, CSV)
+0. Exit
+Choice: 
+1) Manual input  2) Random instance
+Choice: Items ki sankhya (1 se 25): Knapsack capacity W (1 se 100000): Har item ke liye: weight value  (weight >= 1, value >= 0)
+Item 1 weight: Item 1 value : Item 2 weight: Item 2 value : Item 3 weight: Item 3 value : 
+Capacity W = 50
+  #   weight   value
+  1      10      60
+  2      20     100
+  3      30     120
+Exhaustive Search:
+  Chune gaye items (1-based): 2 3
+  Total weight = 50, Total value = 220
+  Nodes/states explored = 8
+  Time = 0.9 us  (total subsets 2^3 = 8)
+
+===== Exhaustive Search =====
+1. 0/1 Knapsack (brute force)
+2. TSP (brute force)
+3. Benchmark (n vs time, CSV)
+0. Exit
+Choice: 
+1) Manual input  2) Random instance
+Choice: Cities ki sankhya (2 se 11): Cost matrix dalo (4x4), diagonal 0 rakho, baaki cost >= 1.
+cost[0][1]: cost[0][2]: cost[0][3]: cost[1][0]: cost[1][2]: cost[1][3]: cost[2][0]: cost[2][1]: cost[2][3]: cost[3][0]: cost[3][1]: cost[3][2]: 
+Cost matrix:
+         0    1    2    3
+   0     0   10   15   20
+   1    10    0   35   25
+   2    15   35    0   30
+   3    20   25   30    0
+Exhaustive Search:
+  Tour: 0 -> 1 -> 3 -> 2 -> 0
+  Minimum cost = 80
+  Nodes/states explored = 6
+  Time = 1.6 us  (total tours (n-1)! = 6)
+
+===== Exhaustive Search =====
+1. 0/1 Knapsack (brute force)
+2. TSP (brute force)
+3. Benchmark (n vs time, CSV)
+0. Exit
+Choice: 
