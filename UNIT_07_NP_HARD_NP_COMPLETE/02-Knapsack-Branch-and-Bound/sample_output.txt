@@ -1,0 +1,23 @@
+===== 0/1 Knapsack - Branch and Bound =====
+1. Manual input
+2. Random instance
+Choice: Items ki sankhya (1 se 2000): Knapsack capacity W (1 se 100000): Har item ke liye: weight value  (weight >= 1, value >= 0)
+Item 1 weight: Item 1 value : Item 2 weight: Item 2 value : Item 3 weight: Item 3 value : Item 4 weight: Item 4 value : Item 5 weight: Item 5 value : Item 6 weight: Item 6 value : 
+Capacity W = 50
+  #   weight   value
+  1      10      60
+  2      20     100
+  3      30     120
+  4      40      30
+  5       5      20
+  6      15      70
+
+Branch and Bound:
+  Chune gaye items (1-based): 1 2 5 6
+  Total weight = 50, Total value = 250
+  Nodes/states explored = 11
+  Time = 3.5 us
+  Poora state-space tree = 2^(n+1)-1 = 127 nodes
+  Estimated memory = 496.0 B
+
+Verification (DP optimum = 250): MATCH - answer sahi hai
