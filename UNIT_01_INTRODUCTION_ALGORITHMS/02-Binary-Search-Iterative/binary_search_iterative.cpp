@@ -47,7 +47,7 @@ int binarySearchIterative(const int arr[], int n, int key, int &comparisons) {
 int main() {
     int arr[MAX_SIZE];
 
-    int n = readInt("Elements ki sankhya (1 se " + to_string(MAX_SIZE) + "): ");
+    int n = readInt("Elements (1 se " + to_string(MAX_SIZE) + "): ");
     while (n < 1 || n > MAX_SIZE) n = readInt("Invalid size! Dobara dalo: ");
 
     cout << "Sorted (ascending) elements dalo:\n";
