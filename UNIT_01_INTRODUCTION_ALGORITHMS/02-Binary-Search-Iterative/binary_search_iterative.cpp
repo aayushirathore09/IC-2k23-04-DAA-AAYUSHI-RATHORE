@@ -22,20 +22,20 @@ int readInt(const string &prompt) {
     return value;
 }
 
-// Binary Search ke liye array sorted (ascending) hona zaroori hai
+// Binary Search 
 bool isSorted(const int arr[], int n) {
     for (int i = 1; i < n; i++)
         if (arr[i - 1] > arr[i]) return false;
     return true;
 }
 
-// Iterative Binary Search. 'comparisons' me steps ginte hain.
-// Return: key ka index, nahi mila to -1
+// Iterative Binary Search. 'comparisons' .
+// Return: key  to -1
 int binarySearchIterative(const int arr[], int n, int key, int &comparisons) {
     int low = 0, high = n - 1;
     comparisons = 0;
     while (low <= high) {
-        int mid = low + (high - low) / 2;   // overflow se bachne ke liye
+        int mid = low + (high - low) / 2;  
         comparisons++;
         if (arr[mid] == key) return mid;
         else if (arr[mid] < key) low = mid + 1;
@@ -68,7 +68,7 @@ int main() {
         else cout << key << " index " << idx << " pe mila. ";
         cout << "(Comparisons: " << comparisons << ")\n";
 
-        cout << "Dobara search? (y/n): ";
+        cout << "search again? (y/n): ";
         cin >> again;
     } while (again == 'y' || again == 'Y');
 
