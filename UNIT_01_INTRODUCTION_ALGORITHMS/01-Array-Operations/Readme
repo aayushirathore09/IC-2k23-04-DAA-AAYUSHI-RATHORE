@@ -1,14 +1,7 @@
 # Array Operations (Insert, Delete, Search, Update, Traverse)
 
-## Problem Statement :-
-Ek integer array par basic operations implement karo: traverse, insert, delete, search aur update, input validation ke saath.
-
-## Algorithm :-
-- **Traverse**: index 0 se size-1 tak saare elements print karo.
-- **Insert at pos**: pos se aage ke elements ko ek step right shift karo, phir value `arr[pos]` me daalo.
-- **Delete at pos**: pos ke aage ke elements ko ek step left shift karo, size kam karo.
-- **Search**: Linear Search, har element ko key se compare karo.
-- **Update**: valid index pe direct nayi value assign karo.
+## Problem Statement :- 
+To implement array operations like insert , delete etc.
 
 ## Pseudocode :-
 
